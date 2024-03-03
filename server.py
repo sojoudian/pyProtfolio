@@ -2,8 +2,9 @@ import http.server
 import socketserver
 import os
 
-PORT = 5555
+PORT = 4321
 DIRECTORY = "./templates/"
+
 os.chdir(DIRECTORY)
 Handler = http.server.SimpleHTTPRequestHandler
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
